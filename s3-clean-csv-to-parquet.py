@@ -33,7 +33,7 @@ def parse_url(text):
 
     return text
 
-def filename_rm_space(filename):
+def create_filename(filename):
     """ returns file name without spaces """
     filename = filename.split('/')[2]
     filename_parts = filename.split('(')
@@ -67,7 +67,7 @@ def lambda_handler(event, context):
         df.columns = [clean_text(x) for x in df.columns]
         
         # provide clean filename and save as parquet
-        pq_filename = filename_rm_space(file_name)
+        pq_filename = create_filename(file_name)
         s3_path = "s3://dev-sim-input-data/smile_data/converted/" + pq_filename
         df.to_parquet(s3_path, compression='snappy')
 
