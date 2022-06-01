@@ -1,2 +1,2 @@
 # lambda-scripts
-various lambda scripts for my own reference
+various of my own lambda scripts for my own reference
