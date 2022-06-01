@@ -15,8 +15,8 @@ def clean_text(text):
 
     specialchars = "!@#$%^&*()[]{};:,./<>?\|`~-=_+\""
     replacechars = "                               " #corresponding characters in inCharSet to be replaced
-    trans_dict = str.maketrans(inCharSet, outCharSet)
-    text = text.translate(splCharReplaceList)
+    trans_dict = str.maketrans(specialchars, replacechars)
+    text = text.translate(trans_dict)
 
     return text
 
