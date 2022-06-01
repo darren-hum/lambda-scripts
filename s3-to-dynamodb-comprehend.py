@@ -1,3 +1,7 @@
+# to read uploaded csv file
+# add new columnn with sentiment analysis by Amazon Comprehend
+# put data into dynamodb table
+
 import json
 import os
 import boto3
