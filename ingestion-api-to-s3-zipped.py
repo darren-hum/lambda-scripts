@@ -12,7 +12,7 @@ def create_foldername(proj_title):
     """ returns file name without spaces """
 
     pq_proj_title = proj_title.replace(" ", "_")
-    print(f"folder to save: {pq_proj_title}")
+    #print(f"folder to save: {pq_proj_title}")
     return pq_proj_title
 
 def lambda_handler(event, context):
